@@ -38,12 +38,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
   <div class="dash">
     <aside class="sidebar">
-      <a class="brand" href="../index.html"><span class="brand__dot"></span>CH3NO2</a>
+      <a class="brand" href="../index.php"><span class="brand__dot"></span>CH3NO2</a>
       <nav>
-        <a href="../index.html">🏠 Home</a>
-        <a href="../queue/queue.html">📊 Queue</a>
-        <a href="../key/redeem.html">🔑 Key einlösen</a>
-        <a href="../buy/buy.html">🛒 Shop</a>
+        <a href="../index.php">🏠 Home</a>
+        <a href="../queue/queue.php">📊 Queue</a>
+        <a href="../key/redeem.php">🔑 Key einlösen</a>
+        <a href="../buy/buy.php">🛒 Shop</a>
         <a href="account.php" class="active">⚙️ Konto</a>
         <a href="logout.php">🚪 Abmelden</a>
       </nav>

@@ -16,11 +16,14 @@ einer SQLite-Datenbankdatei.
    lang sein. Beim ersten Aufruf wird die Datenbank `dashboard/data/app.db`
    automatisch angelegt.
 
-2. **Server starten** (zum Testen):
+2. **Server starten** (zum Testen) – aus dem **Projekt-Root**:
    ```bash
    php -S 127.0.0.1:8000 -t .
    ```
-   Dann im Browser `http://127.0.0.1:8000/dashboard/login.php` öffnen.
+   Dann im Browser `http://127.0.0.1:8000/index.php` öffnen.
+
+Die gesamte Seite läuft über PHP. Gemeinsame Navbar/Footer liegen in
+`partials/` und werden per `require` eingebunden.
 
 ## Dateien
 | Datei               | Zweck                                                      |

@@ -1,26 +1,9 @@
-<!DOCTYPE html>
-<html lang="de">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Platzhalter — Queue.">
-  <title>CH3NO2 — Queue</title>
-  <link rel="stylesheet" href="../style.css">
-</head>
-<body>
-
-  <header class="nav">
-    <div class="nav__inner">
-      <a class="brand" href="../index.html"><span class="brand__dot"></span>CH3NO2</a>
-      <nav class="nav__links">
-        <a href="../index.html">Home</a>
-        <a href="../queue/queue.html" class="active">Queue</a>
-        <a href="../key/redeem.html">Key einlösen</a>
-        <a href="../buy/buy.html">Shop</a>
-      </nav>
-      <a class="btn btn--primary" href="../dashboard/login.php">Dashboard</a>
-    </div>
-  </header>
+<?php
+$TITLE  = 'CH3NO2 — Queue';
+$BASE   = '../';
+$ACTIVE = 'queue';
+require __DIR__ . '/../partials/layout_top.php';
+?>
 
   <main class="container" style="padding-top:60px; padding-bottom:60px;">
     <div class="section__head">
@@ -63,12 +46,4 @@
     </div>
   </main>
 
-  <footer class="footer">
-    <div class="container footer__inner">
-      <span>© 2026 CH3NO2 — Platzhalter-Footer</span>
-      <span>Erstellt mit einer Platzhalter-Vorlage</span>
-    </div>
-  </footer>
-
-</body>
-</html>
+<?php require __DIR__ . '/../partials/layout_bottom.php'; ?>
