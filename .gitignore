@@ -1,0 +1,5 @@
+# SQLite-Datenbank und Laufzeitdateien nicht einchecken
+dashboard/data/app.db
+dashboard/data/app.db-*
+*.db-shm
+*.db-wal
