@@ -1,26 +1,9 @@
-<!DOCTYPE html>
-<html lang="de">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Platzhalter-Beschreibung für deine Startseite.">
-  <title>CH3NO2 — Startseite</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-  <header class="nav">
-    <div class="nav__inner">
-      <a class="brand" href="index.html"><span class="brand__dot"></span>CH3NO2</a>
-      <nav class="nav__links">
-        <a href="index.html" class="active">Home</a>
-        <a href="queue/queue.html">Queue</a>
-        <a href="key/redeem.html">Key einlösen</a>
-        <a href="buy/buy.html">Shop</a>
-      </nav>
-      <a class="btn btn--primary" href="dashboard/login.php">Dashboard</a>
-    </div>
-  </header>
+<?php
+$TITLE  = 'CH3NO2 — Startseite';
+$BASE   = '';
+$ACTIVE = 'home';
+require __DIR__ . '/partials/layout_top.php';
+?>
 
   <main class="container">
 
@@ -34,7 +17,7 @@
           in ein, zwei Sätzen, worum es auf deiner Seite geht.
         </p>
         <div class="hero__cta">
-          <a class="btn btn--primary" href="buy/buy.html">Jetzt loslegen</a>
+          <a class="btn btn--primary" href="buy/buy.php">Jetzt loslegen</a>
           <a class="btn btn--ghost" href="#faq">Mehr erfahren</a>
         </div>
       </div>
@@ -119,12 +102,4 @@
 
   </main>
 
-  <footer class="footer">
-    <div class="container footer__inner">
-      <span>© 2026 CH3NO2 — Platzhalter-Footer</span>
-      <span>Erstellt mit einer Platzhalter-Vorlage</span>
-    </div>
-  </footer>
-
-</body>
-</html>
+<?php require __DIR__ . '/partials/layout_bottom.php'; ?>
