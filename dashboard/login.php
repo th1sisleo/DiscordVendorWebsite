@@ -114,6 +114,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <button type="submit" class="btn btn--primary" style="width:100%;"
                 <?= $locked ? 'disabled' : '' ?>>Anmelden</button>
       </form>
+
+      <div class="panel__links">
+        <a href="register.php">Noch kein Konto? Jetzt registrieren</a>
+      </div>
     </div>
   </main>
 

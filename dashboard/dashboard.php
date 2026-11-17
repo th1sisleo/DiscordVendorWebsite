@@ -23,7 +23,7 @@ $user = require_login();
         <a href="../queue/queue.html">📊 Queue</a>
         <a href="../key/redeem.html">🔑 Key einlösen</a>
         <a href="../buy/buy.html">🛒 Shop</a>
-        <a href="#" class="active">⚙️ Einstellungen</a>
+        <a href="account.php">⚙️ Konto</a>
         <a href="logout.php">🚪 Abmelden</a>
       </nav>
     </aside>

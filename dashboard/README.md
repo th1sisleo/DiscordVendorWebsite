@@ -8,12 +8,13 @@ einer SQLite-Datenbankdatei.
 
 ## Erster Start
 
-1. **Benutzer anlegen** (nur über die Kommandozeile):
+1. **Benutzer anlegen** – entweder per CLI …
    ```bash
    php dashboard/create_user.php <benutzername> <passwort>
    ```
-   Das Passwort muss mindestens 8 Zeichen lang sein. Beim ersten Aufruf wird
-   die Datenbank `dashboard/data/app.db` automatisch angelegt.
+   … oder im Browser über `register.php`. Das Passwort muss mindestens 8 Zeichen
+   lang sein. Beim ersten Aufruf wird die Datenbank `dashboard/data/app.db`
+   automatisch angelegt.
 
 2. **Server starten** (zum Testen):
    ```bash
@@ -26,6 +27,8 @@ einer SQLite-Datenbankdatei.
 |---------------------|------------------------------------------------------------|
 | `config.php`        | DB-Verbindung, Session, Security-Header, Hilfsfunktionen   |
 | `login.php`         | Login-Formular inkl. CSRF-Schutz und Brute-Force-Sperre    |
+| `register.php`      | Selbstregistrierung (mit IP-Limit) + Auto-Login            |
+| `account.php`       | Passwort ändern (nur für angemeldete Nutzer)               |
 | `dashboard.php`     | Geschützte Seite (ohne Login → Weiterleitung zum Login)    |
 | `logout.php`        | Session beenden                                            |
 | `create_user.php`   | Benutzer anlegen (nur CLI)                                 |
@@ -37,6 +40,9 @@ einer SQLite-Datenbankdatei.
 - **SQL-Injection**: ausschließlich Prepared Statements (PDO).
 - **Brute Force**: nach 5 Fehlversuchen (pro Benutzer **oder** IP) 15 Minuten
   gesperrt. Werte in `config.php` anpassbar (`MAX_ATTEMPTS`, `LOCKOUT_MINUTES`).
+- **Registrierung**: pro IP max. 5 neue Konten/Stunde (`MAX_REG_PER_HOUR`),
+  Benutzername auf `[A-Za-z0-9_.-]`, 3–32 Zeichen begrenzt.
+- **Passwortwechsel**: aktuelles Passwort erforderlich, neue Session-ID danach.
 - **CSRF**: Token pro Session, Prüfung mit `hash_equals`.
 - **Sessions**: HttpOnly- und SameSite-Cookie, `Secure` automatisch unter HTTPS,
   Session-ID-Regeneration nach erfolgreichem Login.
