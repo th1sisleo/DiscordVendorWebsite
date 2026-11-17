@@ -1,48 +1,60 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <title>Nitromethane</title>
-    <link rel="stylesheet" href="style.css">
-   </head>
-
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Platzhalter — Key einlösen.">
+  <title>CH3NO2 — Key einlösen</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
 <body>
-    <div>
-        <a class="home" href="/nitro/index.html">Home</a>
+
+  <header class="nav">
+    <div class="nav__inner">
+      <a class="brand" href="../index.html"><span class="brand__dot"></span>CH3NO2</a>
+      <nav class="nav__links">
+        <a href="../index.html">Home</a>
+        <a href="../queue/queue.html">Queue</a>
+        <a href="../key/redeem.html" class="active">Key einlösen</a>
+        <a href="../buy/buy.html">Shop</a>
+      </nav>
+      <a class="btn btn--primary" href="../dashboard/dashboard.html">Dashboard</a>
     </div>
-    <div>
-        <p class="logo">CH3NO2</p>
+  </header>
+
+  <main class="container" style="padding-top:60px; padding-bottom:60px;">
+    <div class="section__head">
+      <h2>Key einlösen</h2>
+      <p>Platzhalter-Formular — gib hier deine Platzhalter-Daten ein.</p>
     </div>
-    </div>
-    <a class="login" href="/nitro/dashboard/dashboard.html">Dashboard</a>
-    </div>
-    <div>
-    <a class="redeem" href="/nitro/key/redeem.html">Reedem Key</a>
-    <a class="queue" href = "/nitro/queue/queue.html">Queue</a>
-    <a class = "buy" href="/nitro/buy/buy.html">Buy Nitro</a>
-    </div>
-    <p class = "redeem_key">Redeem Your Key</p>
-    <div class="key">
-      <p class = "inf">Enter Info</p>
-      <p class="line"></p>
-      <p class="help">Help</p>
-        <div class="form__group field">
-          <input type="input" class="form__field" placeholder="Name" name="name" id='name' required />
-          <label for="name" class="form__label">Token</label>
-          </div> 
-        <div class="form__group2 field">
-            <input type="input" class="form__field2" placeholder="Name" name="name" id='name' required />
-            <label for="name" class="form__label2">Key</label>
-            </div> 
-        <div>
-          <a class="submit">Submit</a>
+
+    <div class="panel panel--narrow">
+      <form onsubmit="return false;">
+        <div class="field">
+          <label for="username">Benutzername</label>
+          <input type="text" id="username" name="username" placeholder="Platzhalter-Benutzername" required>
         </div>
-        <a class="how" href = "https://www.youtube.com/watch?v=YEgFvgg7ZPI">How to get your token</a>
-        <a class="support" href = "https://discord.gg/qGzxAMJYz9">Support</a>
-        <a class="buy_nitro" href = "/nitro/buy/buy.html">Buy Nitro</a>
+        <div class="field">
+          <label for="key">Key</label>
+          <input type="text" id="key" name="key" placeholder="XXXX-XXXX-XXXX-XXXX" required>
+        </div>
+        <button type="submit" class="btn btn--primary" style="width:100%;">Einlösen</button>
+      </form>
+
+      <div class="panel__links">
+        <a href="#">Platzhalter-Hilfe</a>
+        <a href="#">Support</a>
+        <a href="../buy/buy.html">Zum Shop</a>
+      </div>
     </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span>© 2026 CH3NO2 — Platzhalter-Footer</span>
+      <span>Erstellt mit einer Platzhalter-Vorlage</span>
+    </div>
+  </footer>
+
 </body>
 </html>
