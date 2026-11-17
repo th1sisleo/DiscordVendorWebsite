@@ -3,7 +3,8 @@ declare(strict_types=1);
 require __DIR__ . '/config.php';
 
 // Login-Sperre: ohne gültige Session kein Zugriff
-$user = require_login();
+$user   = require_login();
+$ACTIVE = 'overview';
 ?>
 <!DOCTYPE html>
 <html lang="de">
@@ -16,17 +17,7 @@ $user = require_login();
 <body>
 
   <div class="dash">
-    <aside class="sidebar">
-      <a class="brand" href="../index.php"><span class="brand__dot"></span>CH3NO2</a>
-      <nav>
-        <a href="../index.php">🏠 Home</a>
-        <a href="../queue/queue.php">📊 Queue</a>
-        <a href="../key/redeem.php">🔑 Key einlösen</a>
-        <a href="../buy/buy.php">🛒 Shop</a>
-        <a href="account.php">⚙️ Konto</a>
-        <a href="logout.php">🚪 Abmelden</a>
-      </nav>
-    </aside>
+    <?php require __DIR__ . '/partials/sidebar.php'; ?>
 
     <main class="dash__main">
       <h1>Willkommen, <?= e($user['username']) ?> 👋</h1>
