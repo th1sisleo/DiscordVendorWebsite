@@ -1,36 +1,74 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <title>Nitromethane</title>
-    <link rel="stylesheet" href="style.css">
-   </head>
-
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Platzhalter — Queue.">
+  <title>CH3NO2 — Queue</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
 <body>
-    <div>
-        <a class="home" href="/nitro/index.html">Home</a>
+
+  <header class="nav">
+    <div class="nav__inner">
+      <a class="brand" href="../index.html"><span class="brand__dot"></span>CH3NO2</a>
+      <nav class="nav__links">
+        <a href="../index.html">Home</a>
+        <a href="../queue/queue.html" class="active">Queue</a>
+        <a href="../key/redeem.html">Key einlösen</a>
+        <a href="../buy/buy.html">Shop</a>
+      </nav>
+      <a class="btn btn--primary" href="../dashboard/dashboard.html">Dashboard</a>
     </div>
-    <div>
-        <p class="logo">CH3NO2</p>
+  </header>
+
+  <main class="container" style="padding-top:60px; padding-bottom:60px;">
+    <div class="section__head">
+      <h2>Queue &amp; Status</h2>
+      <p>Platzhalter-Übersicht über die aktuelle Warteschlange.</p>
     </div>
-    <a class="login" href="/nitro/dashboard/dashboard.html">Dashboard</a>
+
+    <div class="status-grid">
+      <div class="status-card">
+        <h3>Queue</h3>
+        <div class="status-row">
+          <span>Platzhalter-Eintrag</span>
+          <span class="pill pill--ok">0/5 ●</span>
+        </div>
+        <div class="status-row">
+          <span>Platzhalter-Eintrag</span>
+          <span class="pill pill--idle">wartet</span>
+        </div>
+        <div class="status-row">
+          <span>Platzhalter-Eintrag</span>
+          <span class="pill pill--idle">wartet</span>
+        </div>
+      </div>
+
+      <div class="status-card">
+        <h3>Verlauf</h3>
+        <div class="status-row">
+          <span>Platzhalter-Verlaufseintrag Nummer eins</span>
+          <span class="muted">Mo 09:13</span>
+        </div>
+        <div class="status-row">
+          <span>Platzhalter-Verlaufseintrag Nummer zwei</span>
+          <span class="muted">Mo 08:41</span>
+        </div>
+        <div class="status-row">
+          <span>Platzhalter-Verlaufseintrag Nummer drei</span>
+          <span class="muted">So 22:05</span>
+        </div>
+      </div>
     </div>
-    <div>
-    <a class="redeem" href="/nitro/key/redeem.html">Reedem Key</a>
-    <a class="queue" href = "/nitro/queue/queue.html">Queue</a>
-    <a class = "buy" href="/nitro/buy/buy.html">Buy Nitro</a>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span>© 2026 CH3NO2 — Platzhalter-Footer</span>
+      <span>Erstellt mit einer Platzhalter-Vorlage</span>
     </div>
-    <div class="queuebox">
-        <p>Queue</p>
-        <p class="text2">thisisleo#0911: 0/5 🟢</p>
-    </div>
-    <div class="snipebox">
-        <p>Snipes</p>
-        <p class="text">Succesfully sniped Nitro Basic Monthly for thisisleo</p>
-        <p class = "time">Mo 09:13</p>
-    </div>
+  </footer>
+
 </body>
 </html>
